@@ -1,53 +1,53 @@
-# Configuración de Sign In con Frameworks Oficiales
+# Sign In Configuration with Official Frameworks
 
-## ✅ Apple Sign In - COMPLETADO
+## Apple Sign In - COMPLETED
 
-### Framework implementado:
-- **AuthenticationServices** - Framework oficial de Apple
-- **Funcionalidad completa** - Listo para usar en producción
+### Implemented Framework:
+- **AuthenticationServices** - Official Apple framework
+- **Full functionality** - Ready for production use
 
-### Características implementadas:
-- ✅ Autenticación real con Apple ID
-- ✅ Solicitud de permisos (email, nombre completo)
-- ✅ Manejo de credenciales seguras
-- ✅ Interfaz nativa de Apple
-- ✅ Manejo de errores completo
+### Implemented Features:
+- Real authentication with Apple ID
+- Permission requests (email, full name)
+- Secure credential handling
+- Native Apple interface
+- Comprehensive error handling
 
-### No requiere configuración adicional:
-- Funciona inmediatamente en dispositivos iOS
-- No requiere archivos de configuración externos
-- Cumple con las directrices de App Store
+### No Additional Configuration Required:
+- Works immediately on iOS devices
+- Requires no external configuration files
+- Complies with App Store guidelines
 
 ---
 
-## 🔄 Google Sign In - PREPARADO
+## Google Sign In - PREPARED
 
-### Estado actual:
-- ✅ Interfaz visual completa
-- ✅ Lógica de autenticación preparada
-- ✅ Manejo de errores implementado
-- ⏳ Requiere instalación del framework
+### Current Status:
+- Complete visual interface
+- Authentication logic prepared
+- Error handling implemented
+- Requires framework installation
 
-### Para completar la implementación:
+### To Complete Implementation:
 
-#### 1. Instalar GoogleSignIn pod:
+#### 1. Install GoogleSignIn pod:
 ```bash
-# En tu proyecto, crear/editar Podfile
+# In your project, create/edit Podfile
 pod init
 
-# Agregar la dependencia
+# Add the dependency
 pod 'GoogleSignIn'
 
-# Instalar
+# Install
 pod install
 ```
 
-#### 2. Configurar GoogleService-Info.plist:
-- Descargar desde [Google Cloud Console](https://console.cloud.google.com/)
-- Agregar al proyecto Xcode
-- Configurar URL schemes en Info.plist
+#### 2. Configure GoogleService-Info.plist:
+- Download from [Google Cloud Console](https://console.cloud.google.com/)
+- Add to the Xcode project
+- Configure URL schemes in Info.plist
 
-#### 3. Configurar Info.plist:
+#### 3. Configure Info.plist:
 ```xml
 <key>CFBundleURLTypes</key>
 <array>
@@ -62,93 +62,93 @@ pod install
 </array>
 ```
 
-#### 4. Descomentar código real en GoogleSignInManager.swift:
-- Buscar la sección comentada "Implementación real"
-- Descomentar el código
-- Agregar `import GoogleSignIn`
+#### 4. Uncomment actual code in GoogleSignInManager.swift:
+- Find the commented "Actual implementation" section
+- Uncomment the code
+- Add `import GoogleSignIn`
 
 ---
 
-## 🚀 Características Implementadas
+## Implemented Features
 
-### Interfaz de Usuario:
-- ✅ Diseño nativo de iOS
-- ✅ Adaptación automática modo claro/oscuro
-- ✅ Animaciones suaves y profesionales
-- ✅ Indicadores de progreso en tiempo real
-- ✅ Manejo de errores visual
+### User Interface:
+- Native iOS design
+- Automatic light/dark mode adaptation
+- Smooth and professional animations
+- Real-time progress indicators
+- Visual error handling
 
-### Seguridad:
-- ✅ Autenticación segura con Apple
-- ✅ Manejo de tokens únicos
-- ✅ Validación de credenciales
-- ✅ Logging para debugging
+### Security:
+- Secure authentication with Apple
+- Unique token handling
+- Credential validation
+- Logging for debugging
 
-### Experiencia de Usuario:
-- ✅ Flujo de 3 pasos visual
-- ✅ Feedback inmediato del estado
-- ✅ Cancelación fácil
-- ✅ Transiciones suaves
+### User Experience:
+- Visual 3-step flow
+- Immediate status feedback
+- Easy cancellation
+- Smooth transitions
 
 ---
 
-## 📱 Uso en la App
+## App Usage
 
 ### Apple Sign In:
 ```swift
-// Funciona inmediatamente
+// Works immediately
 await authManager.signInWithApple()
 ```
 
 ### Google Sign In:
 ```swift
-// Funciona después de completar la configuración
+// Works after completing configuration
 await authManager.signInWithGoogle()
 ```
 
 ---
 
-## 🔧 Personalización
+## Customization
 
-### Colores y Estilos:
-- Modificar en `AppleSignInView.swift` y `GoogleSignInView.swift`
-- Cambiar gradientes, colores y animaciones
-- Ajustar timing de transiciones
+### Colors and Styles:
+- Modify in `AppleSignInView.swift` and `GoogleSignInView.swift`
+- Change gradients, colors, and animations
+- Adjust transition timing
 
-### Textos:
-- Editar strings en los enums `SignInStep`
-- Personalizar mensajes de error
-- Adaptar a diferentes idiomas
+### Texts:
+- Edit strings in the `SignInStep` enums
+- Customize error messages
+- Adapt to different languages
 
-### Flujo de Autenticación:
-- Modificar pasos en `startSignInProcess()`
-- Ajustar tiempos de espera
-- Agregar pasos adicionales si es necesario
+### Authentication Flow:
+- Modify steps in `startSignInProcess()`
+- Adjust wait times
+- Add additional steps if necessary
 
 ---
 
-## 📋 Checklist de Implementación
+## Implementation Checklist
 
 ### Apple Sign In:
-- [x] Framework AuthenticationServices
-- [x] Interfaz de usuario completa
-- [x] Manejo de credenciales
-- [x] Manejo de errores
-- [x] Testing en dispositivo real
+- [x] AuthenticationServices Framework
+- [x] Complete user interface
+- [x] Credential handling
+- [x] Error handling
+- [x] Real device testing
 
 ### Google Sign In:
-- [ ] Instalar GoogleSignIn pod
-- [ ] Configurar GoogleService-Info.plist
-- [ ] Configurar URL schemes
-- [ ] Descomentar código real
-- [ ] Testing en dispositivo real
+- [ ] Install GoogleSignIn pod
+- [ ] Configure GoogleService-Info.plist
+- [ ] Configure URL schemes
+- [ ] Uncomment actual code
+- [ ] Real device testing
 
 ---
 
-## 🎯 Próximos Pasos
+## Next Steps
 
-1. **Probar Apple Sign In** en dispositivo real
-2. **Completar configuración de Google** si es necesario
-3. **Personalizar estilos** según necesidades de la app
-4. **Agregar analytics** para tracking de uso
-5. **Implementar logout** para ambos servicios
+1. **Test Apple Sign In** on a real device
+2. **Complete Google configuration** if necessary
+3. **Customize styles** according to app needs
+4. **Add analytics** for usage tracking
+5. **Implement logout** for both services
