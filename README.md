@@ -36,7 +36,7 @@ HealthPatch is a comprehensive iOS demonstration application built with Swift an
 3. Select your target device or simulator.
 4. Press `Cmd + R` to build and run the application.
 
-*Note: If running on a physical device, ensure you have a valid Apple Developer account configured in the Xcode Signing & Capabilities tab.*
+_Note: If running on a physical device, ensure you have a valid Apple Developer account configured in the Xcode Signing & Capabilities tab._
 
 ## Bluetooth Simulation
 
@@ -44,7 +44,21 @@ To facilitate development and testing without physical hardware, the app include
 
 ## Context and History
 
-This application was developed as a comprehensive medical app demo. It was heavily refactored to serve as a clean, white-label "HealthPatch" boilerplate, removing any proprietary legacy branding or specific company assets to create an open, generic foundation for wearable medical tech.
+## Context
+
+Built in under two weeks with no prior Swift experience — the only background
+at the time was basic C, self-taught C# from the OracleManager project, and SQL.
+
+The app was developed during the same professional internship as OracleManager,
+as a companion deliverable for an investor demo the company was preparing to
+present in Denmark. The requirement was a polished, working iOS application
+that could demonstrate a wearable medical patch concept to external stakeholders
+— built from scratch, under a hard deadline, in a language and framework
+learned on the job.
+
+SwiftUI, CoreBluetooth, MVVM architecture, and the Apple authentication stack
+were all picked up during development. The mock peripheral system was built
+specifically to allow a convincing live demo without requiring physical hardware.
 
 ## License
 
