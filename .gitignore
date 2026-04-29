@@ -1,1 +1,5 @@
 .DS_Store
+xcuserdata/
+DerivedData/
+*.xcuserstate
+HealthPatch/.DS_Store
