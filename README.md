@@ -4,62 +4,47 @@
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-Blue?logo=swift)
 ![Bluetooth](https://img.shields.io/badge/CoreBluetooth-00599C?logo=bluetooth)
 
-HealthPatch is a comprehensive iOS demonstration application built with Swift and SwiftUI. It serves as the companion app for a simulated wearable medical health patch, showcasing how a modern medical app integrates with hardware, manages user data, and handles real-time monitoring.
+HealthPatch is an iOS demo app built with Swift and SwiftUI, the companion app for a simulated wearable medical patch. It connects to the patch over Bluetooth and shows its vital signs in real time, and it has the sign-in, device and settings screens of a real medical app.
 
 ## Features
 
-- **Real-Time Monitoring:** Dashboard (`MonitoringView`) to display simulated vital signs and real-time data from the connected patch.
-- **Bluetooth Integration:** Utilizes `CoreBluetooth` via a custom `BluetoothManager` to scan, connect, and receive data from peripherals. Includes a `MockPeripheral` to simulate patch behavior without needing actual hardware.
-- **Authentication:** Complete sign-up, login, and forgot password flows (`AuthenticationManager`), including integration for Apple Sign-In and Google Sign-In.
-- **Device Management:** A dedicated `DeviceListView` to manage connected patches, along with a "Find My" feature (`FindMyView`) to locate misplaced hardware.
-- **User Settings & Profile:** Extensive settings including `UserAccountView`, `PrivacySettingsView`, `NotificationSettingsView`, `EmergencyView`, and `FamilySharingView`.
-- **Debugging & Logs:** Built-in `DebugView` and `BluetoothLogsView` for tracking connection states and data payloads during development.
+- Real-time monitoring: `MonitoringView` shows the simulated vital signs coming from the connected patch.
+- Bluetooth: a custom `BluetoothManager` uses CoreBluetooth to scan for peripherals, connect and receive data. `MockPeripheral` stands in for the patch when there is no hardware (see [Bluetooth simulation](#bluetooth-simulation)).
+- Authentication: sign-up, login and forgot-password flows in `AuthenticationManager`, with Apple Sign-In and Google Sign-In.
+- Device management: `DeviceListView` manages the connected patches, and `FindMyView` helps locate a misplaced one.
+- Settings and profile: `UserAccountView`, `PrivacySettingsView`, `NotificationSettingsView`, `EmergencyView` and `FamilySharingView`.
+- Debugging: `DebugView` and `BluetoothLogsView` track connection states and data payloads during development.
 
-## Tech Stack
+## Tech stack
 
-- **Language:** Swift 5+
-- **UI Framework:** SwiftUI
-- **Hardware Integration:** CoreBluetooth
-- **Architecture:** MVVM (Model-View-ViewModel)
+- Swift 5+
+- SwiftUI
+- CoreBluetooth
+- MVVM architecture
 
-## Getting Started
+## Getting started
 
-### Prerequisites
-
-- macOS with Xcode 15 or later.
-- iOS 16.0+ deployment target.
-
-### Installation & Running
+You need macOS with Xcode 15 or later. The deployment target is iOS 16.0+.
 
 1. Clone this repository.
 2. Open `HealthPatch.xcodeproj` in Xcode.
 3. Select your target device or simulator.
-4. Press `Cmd + R` to build and run the application.
+4. Press `Cmd + R` to build and run.
 
-_Note: If running on a physical device, ensure you have a valid Apple Developer account configured in the Xcode Signing & Capabilities tab._
+To run it on a physical device you need a valid Apple Developer account set up in Xcode under Signing & Capabilities.
 
-## Bluetooth Simulation
+## Bluetooth simulation
 
-To facilitate development and testing without physical hardware, the app includes a **Mock Peripheral** system. When the app scans for devices, it will automatically populate a simulated "HealthPatch" device that broadcasts dummy telemetry data (heart rate, temperature, etc.), allowing UI and logic testing in a fully disconnected environment.
-
-## Context and History
+The app includes a mock peripheral so it can be developed and tested without the physical patch. When the app scans for devices, a simulated "HealthPatch" appears and broadcasts dummy telemetry (heart rate, temperature, etc.), so the UI and logic can be tested with no hardware connected.
 
 ## Context
 
-Built in under two weeks with no prior Swift experience — the only background
-at the time was basic C, self-taught C# from the OracleManager project, and SQL.
+Built in under two weeks with no prior Swift experience. At the time the only background was basic C, self-taught C# from the OracleManager project, and SQL.
 
-The app was developed during the same professional internship as OracleManager,
-as a companion deliverable for an investor demo the company was preparing to
-present in Denmark. The requirement was a polished, working iOS application
-that could demonstrate a wearable medical patch concept to external stakeholders
-— built from scratch, under a hard deadline, in a language and framework
-learned on the job.
+The app was developed during the same professional internship as OracleManager, for an investor demo the company was preparing to present in Denmark. It had to be a polished, working iOS app that could show the wearable patch concept to people outside the company, and it was built from scratch against a hard deadline, in a language and framework learned on the job.
 
-SwiftUI, CoreBluetooth, MVVM architecture, and the Apple authentication stack
-were all picked up during development. The mock peripheral system was built
-specifically to allow a convincing live demo without requiring physical hardware.
+SwiftUI, CoreBluetooth, MVVM and the Apple authentication stack were all learned during development. The mock peripheral was built so the live demo could be convincing without the physical hardware.
 
 ## License
 
-This project is intended for demonstration and portfolio purposes. Feel free to explore the code, learn from the Bluetooth implementation, and adapt the UI patterns for your own SwiftUI projects.
+Apache-2.0, see [LICENSE](LICENSE). The project is meant for demonstration and as a portfolio piece. You are welcome to read the code and reuse the Bluetooth and UI patterns in your own SwiftUI projects.
